@@ -11,7 +11,7 @@ end
 def decode_word(word)
   word_split = word.split
   array = word_split.map do |i|
-      decode_char(i)
+    decode_char(i)
   end
   array.join
 end
@@ -21,4 +21,4 @@ def decode(phr)
   array = sentence.map { |word| decode_word(word) }
   array.join(' ')
 end
-print decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...')
+decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-. / .-. ..- -... .. . ...')
