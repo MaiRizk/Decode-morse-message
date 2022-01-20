@@ -7,3 +7,11 @@ def decode_char(char)
   index = @morse.find_index(char)
   @alphabet[index]
 end
+
+def decode_word(word)
+  word_split = word.split
+  array = word_split.map do |i|
+      decode_char(i)
+  end
+  array.join
+end
